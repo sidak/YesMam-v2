@@ -1,5 +1,8 @@
 apply plugin: 'com.android.application'
-
+repositories {
+    maven { url "http://dl.bintray.com/populov/maven" }
+    mavenCentral()
+}
 android {
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
@@ -20,6 +23,8 @@ android {
 }
 
 dependencies {
+    // ViewPager Indicator
+    compile 'com.viewpagerindicator:library:2.4.1'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:21.0.3'
 }
