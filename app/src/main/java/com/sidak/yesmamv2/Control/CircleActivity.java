@@ -10,13 +10,36 @@ public class CircleActivity extends InitialActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_circle);
+        setUpView();
+        setTab();
 
-        mAdapter = new TestFragmentAdapter(getSupportFragmentManager());
 
+    }
+    private void setUpView(){
         mPager = (ViewPager)findViewById(R.id.pager);
+        mAdapter = new TestFragmentAdapter(this, getSupportFragmentManager());
         mPager.setAdapter(mAdapter);
-
         mIndicator = (CirclePageIndicator)findViewById(R.id.indicator);
-        mIndicator.setViewPager(mPager);
+        mIndicator.setViewPager(mPager,0);
+
+    }
+    private void setTab(){
+        mIndicator.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                mIndicator.setCurrentItem(position);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        }
+        );
     }
 }

@@ -1,21 +1,31 @@
 package com.sidak.yesmamv2.Control;
 
+import android.content.Context;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import com.viewpagerindicator.IconPagerAdapter;
 
 public class TestFragmentAdapter extends FragmentPagerAdapter {
-    protected static final String[] CONTENT = new String[] { "This", "Is", "A", "Test", };
+    private Context cont;
+    private int mCount = 2;
 
-    private int mCount = CONTENT.length;
-
-    public TestFragmentAdapter(FragmentManager fm) {
+    public TestFragmentAdapter(Context context, FragmentManager fm) {
         super(fm);
+        cont=context;
     }
 
     @Override public Fragment getItem(int i) {
-        return TestFragment.newInstance(CONTENT[i]);
+        Fragment f = new Fragment();
+        switch(i){
+            case 0:
+                f=StartOptionFragment.newInstance(cont);
+                break;
+            case 1:
+                f=SemDatesFragment.newInstance(cont);
+                break;
+        }
+        return f;
     }
 
     @Override
