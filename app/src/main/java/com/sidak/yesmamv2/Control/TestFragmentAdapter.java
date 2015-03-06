@@ -8,7 +8,7 @@ import com.viewpagerindicator.IconPagerAdapter;
 
 public class TestFragmentAdapter extends FragmentPagerAdapter {
     private Context cont;
-    private int mCount = 2;
+    private int mCount = 3;
 
     public TestFragmentAdapter(Context context, FragmentManager fm) {
         super(fm);
@@ -23,6 +23,9 @@ public class TestFragmentAdapter extends FragmentPagerAdapter {
                 break;
             case 1:
                 f=SemDatesFragment.newInstance(cont);
+                break;
+            case 2:
+                f= SemMteFragment.newInstance(cont);
                 break;
         }
         return f;
