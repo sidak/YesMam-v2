@@ -14,6 +14,10 @@
         <activity
             android:name=".Control.CircleActivity"
             android:label="@string/title_activity_circle" >
+        </activity>
+        <activity
+            android:name=".Control.SplashScreenActivity"
+            android:label="Yes Mam " >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
