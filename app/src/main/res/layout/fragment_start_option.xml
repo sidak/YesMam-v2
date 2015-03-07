@@ -8,13 +8,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Import Data"
-        android:id="@+id/button"
+        android:id="@+id/importSem"
         android:layout_gravity="center_horizontal" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Semester"
-        android:id="@+id/button2"
+        android:id="@+id/addSem"
         android:layout_gravity="center_horizontal" />
 </LinearLayout>
