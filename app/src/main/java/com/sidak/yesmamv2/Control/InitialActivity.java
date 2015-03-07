@@ -1,17 +1,18 @@
 package com.sidak.yesmamv2.Control;
 
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 import com.sidak.yesmamv2.R;
 import com.viewpagerindicator.PageIndicator;
 
 public abstract class InitialActivity extends FragmentActivity {
     TestFragmentAdapter mAdapter;
-    ViewPager mPager;
+    NonSwipeableViewPager mPager;
     PageIndicator mIndicator;
+    Button nextButton;
 
 
 

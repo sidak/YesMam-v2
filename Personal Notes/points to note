@@ -144,3 +144,9 @@ startActivity(i);
 ##############
 
 
+# apply() was added in 2.3, it commits without returning a boolean indicating success or failure.
+
+# commit() returns true if the save works, false otherwise.
+
+# apply() was added as the Android dev team noticed that almost no one
+  took notice of the return value, so apply is faster as it is asynchronous.
