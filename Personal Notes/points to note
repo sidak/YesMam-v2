@@ -150,3 +150,6 @@ startActivity(i);
 
 # apply() was added as the Android dev team noticed that almost no one
   took notice of the return value, so apply is faster as it is asynchronous.
+
+# doing android:background="@null" sets the imagebutton to be transparent
+

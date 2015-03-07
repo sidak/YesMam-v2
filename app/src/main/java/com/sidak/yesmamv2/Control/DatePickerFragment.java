@@ -6,21 +6,21 @@ package com.sidak.yesmamv2.Control;
 
 import java.util.Calendar;
 
-        import android.annotation.SuppressLint;
-        import android.app.DatePickerDialog;
-        import android.app.Dialog;
-        import android.app.DialogFragment;
-        import android.os.Bundle;
-        import android.widget.DatePicker;
-        import android.widget.TextView;
-
+import android.annotation.SuppressLint;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.os.Bundle;
+import android.widget.DatePicker;
+import android.widget.EditText;
 @SuppressLint("ValidFragment")
 public class DatePickerFragment extends DialogFragment implements
         DatePickerDialog.OnDateSetListener {
-    private TextView textView;
-    public DatePickerFragment(TextView tv){
-        textView=tv;
+    private EditText date;
+    public DatePickerFragment(EditText ed){
+        date=ed;
     }
+
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         // Use the current date as the default date in the picker
@@ -36,8 +36,7 @@ public class DatePickerFragment extends DialogFragment implements
     public void onDateSet(DatePicker view, int year, int month, int day) {
         // Do something with the date chosen by the user
 
-        textView.setText(String.valueOf(day)+"/"+String.valueOf(month+1)+"/"+String.valueOf(year));
-
+        date.setText(String.valueOf(day)+"/"+String.valueOf(month+1)+"/"+String.valueOf(year));
 
     }
 }

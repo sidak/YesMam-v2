@@ -7,23 +7,60 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Enter Start Date"
-        android:id="@+id/textView" />
-
-    <EditText
+        android:id="@+id/showStartDate" />
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_gravity="right" />
+        >
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/startDate"
+            android:layout_gravity="right"
+            android:layout_weight="2"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/date1"
+            android:id="@+id/startDateButton"
+            android:background="@null"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Enter end date"
-        android:id="@+id/textView2" />
+        android:id="@+id/showEndDate" />
 
-    <EditText
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2" />
+        >
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/endDate"
+            android:layout_gravity="right"
+            android:layout_weight="2"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/date1"
+            android:id="@+id/endDateButton"
+            android:background="@null"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+
 
 </LinearLayout>
